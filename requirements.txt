@@ -30,8 +30,7 @@ numpy==1.26.4
 packaging==24.1
 parso==0.8.4
 PennyLane==0.38.0
-PennyLane_Lightning @ file:///PennyLane_Lightning-0.38.0-cp310-cp310-linux_x86_64.whl
-PennyLane_Lightning_GPU @ file:///PennyLane_Lightning_GPU-0.38.0-cp310-cp310-linux_x86_64.whl
+
 pexpect==4.9.0
 pillow==11.0.0
 platformdirs==4.3.6
