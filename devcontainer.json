@@ -1,0 +1,32 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "gpus": "all"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "meezilla.json",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "ms-python.python"
+            ]
+        }
+    },
+    "mounts": [
+        // "source=${env:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached" // Windows only to use Git credentials
+    ],
+    "runArgs": [
+        "--gpus",
+        "all",
+        "--runtime",
+        "nvidia"
+    ],
+    "postCreateCommand": "sed -i 's/\r$//' .devcontainer/misc/*.sh;sh .devcontainer/misc/initialize.sh"
+}
